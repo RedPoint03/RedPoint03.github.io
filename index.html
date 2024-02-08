@@ -12,19 +12,33 @@
           display: flex;
            justify-content: center;
            align-items: center;
-            height: 100vh;
+            height: 75vh;
         }
         img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        buton {
+            align-items: center;
         }
     </style>
 </head>
 <body>
+    <script type="text/javascript">
+     var isAudioPlayed = false;
+    function playAudio() {
+    
+    isAudioPlayed = true;
+    var myAudio = new Audio('audio.mp3')
+    myAudio.play();
+    }
+
+
+    document.body.onclick = ()=>{
+    if(isAudioPlayed) return ;
+    playAudio();
+    }  
+    </script>
     <img src="img.png">
-    <audio controls>
-  <source src="audio.mp3" type="audio/mpeg">
-  Tarayıcınız audio elementini desteklemiyor.
-</audio>
 </body>
 </html>
